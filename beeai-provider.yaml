@@ -5,4 +5,4 @@ package: "git+https://github.com/nicknochnack/BuildACPServer"
 serverType: http
 mcpTransport: sse
 mcpEndpoint: /sse
-command: [ "composition-agent" ]
+command: [ "crew-agent" ]
