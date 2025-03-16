@@ -5,16 +5,21 @@ from beeai_sdk.providers.agent import run_agent_provider
 from beeai_sdk.schemas.text import TextOutput, TextInput
 
 
-def run():
+def main():
     server = Server("randoagentserver")
 
-    @server.agent()
+    @server.agent(
+        "hello-world",
+        "this is my hello world agent",
+        input=TextInput,
+        output=TextOutput,
+    )
     async def run_crewai_agent(input: TextInput, ctx: Context) -> TextOutput:
         # Core logic for the "hello-world" agent
-        return TextOutput(text=f"Hi there {input.text}")
+        return TextOutput(text=f"Wassup homeboy {input.text}!")
 
-    run_agent_provider(server)
+    asyncio.run(run_agent_provider(server))
 
 
 if __name__ == "__main__":
-    asyncio.run(run())
+    main()
