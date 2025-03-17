@@ -14,7 +14,7 @@ async def run_client():
             print("Available agents:", [agent.name for agent in resp.agents])
 
             # Run agent
-            resp = await session.run_agent("hello-world", {"text": "Bee"})
+            resp = await session.run_agent("hello-world", {"text": "how tall is the Sydney Harbour Bridge in km?"})
             print("Agent:", resp.output["text"])
 
 
