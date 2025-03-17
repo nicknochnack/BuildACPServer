@@ -10,4 +10,4 @@ dependencies = [
 ]
 
 [project.scripts]
-acp-agent = "acpserver.server:main"
+acp-agent = "acpserver.server_old:main"
