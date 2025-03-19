@@ -40,7 +40,7 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
-    { name = "beeai-sdk", specifier = ">=0.0.14" },
+    { name = "beeai-sdk", specifier = "==0.0.16" },
     { name = "md2pdf", specifier = ">=1.0.1" },
     { name = "pyperclip", specifier = ">=1.9.0" },
     { name = "smolagents", extras = ["litellm"], specifier = ">=1.11.0" },

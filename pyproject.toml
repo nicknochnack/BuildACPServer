@@ -5,10 +5,8 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
-    "beeai-sdk>=0.0.14",
-    "md2pdf>=1.0.1",
-    "pyperclip>=1.9.0",
-    "smolagents[litellm]>=1.11.0",
+    "beeai-sdk==0.0.16",
+    "smolagents[litellm]==1.11.0",
 ]
 
 [project.scripts]
