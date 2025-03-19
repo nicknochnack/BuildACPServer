@@ -3,7 +3,7 @@ name = "acpagent"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = "==3.12.9"
 dependencies = [
     "beeai-sdk==0.0.16",
     "smolagents[litellm]==1.11.0",
