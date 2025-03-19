@@ -17,7 +17,8 @@ def main():
     async def run_crewai_agent(input: TextInput, ctx: Context) -> TextOutput:
         
         model = LiteLLMModel(
-                model_id="ollama_chat/llama3.1:8b-beeai",
+                # model_id="ollama_chat/llama3.1:8b-beeai",
+                model_id="ollama_chat/qwen2.5:14b",
                 api_base="http://localhost:11434",  # replace with remote open-ai compatible server if necessary
                 api_key="your-api-key",  # replace with API key if necessary
                 num_ctx=8192) 
@@ -28,7 +29,7 @@ def main():
             input.text
         )
 
-        return TextOutput(text=response)
+        return TextOutput(text=str(response))
 
     asyncio.run(run_agent_provider(server))
 
