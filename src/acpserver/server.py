@@ -9,8 +9,8 @@ server = Server("randoagentserver")
 async def run_crewai_agent(input: TextInput, ctx: Context) -> TextOutput:
 
     model = LiteLLMModel(
-        model_id="ollama/qwen2.5:14b",
-        api_base="http://localhost:11434",
+        model_id="ollama_chat/qwen2.5:14b",
+        api_base="http://host.docker.internal:11434",
         api_key="your-api-key",
         num_ctx=8192,
     )
