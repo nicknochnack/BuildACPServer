@@ -6,7 +6,7 @@ framework: Smolagents
 license: Apache 2.0
 languages: 
   - Python
-githubUrl: https://github.com/nicknochnack/BuildACPServer
+githubUrl: https://github.com/nicknochnack/BuildACPServer/tree/main
 examples: 
   cli:
     - command: beeai run ollama-smolagents "What is the height of the Sydney harbour bridge in km?"
