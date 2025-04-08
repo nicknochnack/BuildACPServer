@@ -1,0 +1,58 @@
+manifestVersion: 1
+name: "ollama-smolagents"
+description: The agent does stuff using smolagents.
+
+framework: Smolagents
+license: Apache 2.0
+languages: 
+  - Python
+githubUrl: https://github.com/nicknochnack/BuildACPServer
+examples: 
+  cli:
+    - command: beeai run ollama-smolagents "What is the height of the Sydney harbour bridge in km?"
+      description: Running a Research Query
+      processingSteps:
+        - Runs a query
+        - Searches the web smolagents CodeAgent
+        - Returns a result
+
+ui: 
+  type: hands-off
+  userGreeting: What topic do you want to do?
+fullDescription: |
+  The agent does stuff using smolagents.
+
+  ## How It Works
+  The agent follows a structured workflow to perform iterative web research and summarization:
+
+  - **Runs a Query**: Does query stuff
+  - **Web Research**: Searches the web smolagents CodeAgent base tools
+  - **Finalization**: Consolidates all gathered insights and sources into a structured summary.
+
+  The agent loops through steps 2–4 until the research loop limit is reached.
+
+  ## Input Parameters
+  - **prompt** (string) – The topic to research.
+
+  ## Key Features
+  - **Iterative Research Process** – Automatically refines queries and expands knowledge.
+  - **Multi-Source Information Gathering** – Supports Tavily, DuckDuckGo, and Perplexity APIs.
+  - **LLM-Powered Summarization** – Generates coherent and well-structured summaries.
+  - **Automated Query Refinement** – Identifies knowledge gaps and adjusts queries dynamically.
+
+  ## Use Cases
+  - **Market Research** – Automates data gathering for competitive analysis.
+  - **Academic Research** – Summarizes recent findings on a specific topic.
+  - **Content Creation** – Gathers background information for articles, blogs, and reports.
+  - **Technical Deep Dives** – Explores emerging technologies with structured, iterative research.
+
+env:
+  - name: LLM_MODEL
+    required: false
+    description: "Model to use from the specified OpenAI-compatible API."
+  - name: LLM_API_BASE
+    required: false
+    description: "Base URL for OpenAI-compatible API endpoint"
+  - name: LLM_API_KEY
+    required: false
+    description: "API key for OpenAI-compatible API endpoint"
