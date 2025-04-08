@@ -1,12 +1,12 @@
-from beeai_sdk.providers.agent import Server
-from beeai_sdk.schemas.text import TextOutput, TextInput, Con
+from beeai_sdk.providers.agent import Server, Context
+from beeai_sdk.schemas.text import TextOutput, TextInput
 from smolagents import CodeAgent, DuckDuckGoSearchTool, LiteLLMModel, VisitWebpageTool
 
 server = Server("randoagentserver")
 
 
 @server.agent()
-async def run_crewai_agent(input: TextInput) -> TextOutput:
+async def run_crewai_agent(input: TextInput, ctx: Context) -> TextOutput:
 
     model = LiteLLMModel(
         model_id="ollama_chat/qwen2.5:14b",
