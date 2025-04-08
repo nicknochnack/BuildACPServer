@@ -1,5 +1,5 @@
 manifestVersion: 1
-name: "ollama-smolagents"
+name: "ollama-smolagents-2"
 description: The agent does stuff using smolagents.
 
 framework: Smolagents
