@@ -9,5 +9,7 @@ dependencies = [
     "smolagents[litellm]==1.11.0",
 ]
 
+tool.uv.package = true
+
 [project.scripts]
 server = "acpserver.server:server"
