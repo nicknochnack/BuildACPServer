@@ -5,7 +5,7 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
-    "beeai-sdk==0.0.16",
+    "beeai-sdk==0.0.21",
     "smolagents[litellm]==1.11.0",
 ]
 
