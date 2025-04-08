@@ -3,11 +3,11 @@ name = "acpagent"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = "==3.12.9"
+requires-python = ">=3.11"
 dependencies = [
     "beeai-sdk==0.0.16",
     "smolagents[litellm]==1.11.0",
 ]
 
 [project.scripts]
-acp-agent = "acpserver.server:main"
+server = "acpserver.server:server"
